@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Interfaz.css">
+    <link rel="stylesheet" type="text/css" href="Slider.css">
+</head>
+
+<body>
+    <div id="app">
+            <template>
+                <table id="T1">
+                	<tr>
+                		<td v-for="curso in total">{{cantidad}}</td>
+                	</tr>
+                </table>
+                
+           		<input type="range" name="" v-model="divisiones" min="1" max="32" class="range">
+                <p>Divisiones: {{divisiones}}</p>
+                <input type="text" v-model="cantidad">
+            </template>
+    </div>
+    <script type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript">
+    let app = new Vue({
+        el: '#app',
+        data: {
+            divisiones: 1,
+            cantidad: ''
+        },
+        computed: {
+      total: function () {
+        var x = Number(this.divisiones)
+      return x 
+        
+    }
+  }
+
+    });
+    </script>
+</body>
+
+</html>

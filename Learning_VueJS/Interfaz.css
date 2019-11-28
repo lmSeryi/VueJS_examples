@@ -1,0 +1,53 @@
+*{
+	margin:0;
+	padding: 0;
+	font-family: Verdana;
+}
+
+body{
+	background: #a0A0ff;
+}
+
+.Panel{
+	position: absolute;
+	width: 100%;
+	height: 20vh;
+	border: 2px solid #7070ff;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	bottom: 0%;
+	background: #80ABFF;
+}
+
+.container{
+	position: absolute;
+	width: 100%;
+	height: 80vh;
+	border: 2px solid #ff0;
+}
+
+#T1{
+	margin-left: 7%;
+	margin-top: 5%;
+	border: 2px solid #aaa;
+	width: 85%;
+	height: 8vh;
+	background: #fff;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#T2{
+	margin-left: 7%;
+	margin-top: 5%;
+	border: 1px solid #aaa;
+	width: 85%;
+	height: 8vh;
+	background: #fff;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+td{
+	border-right: 2px solid #aaa;
+}

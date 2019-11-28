@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+            <h2>¿Cuáles son tus cursos favoritos?</h2>
+            <template>
+                <table>
+                	<tr>
+                		<td v-for="curso in total">-</td>
+                	</tr>
+                </table>
+                
+           		<input type="range" name="" v-model="divisiones" min="1" max="32">
+                <p>Divisiones: {{divisiones}}</p>
+            </template>
+            
+    </div>
+    <script type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript">
+    let app = new Vue({
+        el: '#app',
+        data: {
+            divisiones: 1,
+        },
+        computed: {
+      total: function () {
+        var x = Number(this.divisiones)
+      return x 
+        
+    }
+  }
+    });
+    </script>
+</body>
+
+</html>

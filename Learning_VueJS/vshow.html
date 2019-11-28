@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<div v-show="mostrar">
+			<h1>Este es mi titutlo</h1>
+			<h2>Este es mi subtitulo</h2>
+			<a v-bind:href="url" target = "_blank">Ir a {{pagina}}</a>
+		</div>
+		<div v-show="!mostrar">
+			Esto está oculto
+		</div>		
+			<button @click = "change" >Boton 1</button>
+	
+	</div>
+
+
+	<script type="text/javascript" src="vue.js"></script>
+	<script type="text/javascript">
+		let divM = false;
+		let app = new Vue({
+			el: '#app',
+			data: {
+				url: 'https://www.google.com/',
+				pagina: 'Google',
+				mostrar: true
+			},
+			methods: {
+				change: function(){
+					if(divM == false){
+						this.mostrar = false;
+						divM = true;
+					}
+					else{
+						this.mostrar = true;
+						divM = false;
+					}
+
+				}
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Interfaz.css">
+    <link rel="stylesheet" type="text/css" href="Slider.css">
+</head>
+
+<body>
+    <div id="app">
+        <template>
+            <table id="T1" @click="tabla1">
+                <tr>
+                    <td v-for="curso in total1">{{dato1}}</td>
+                </tr>
+            </table>
+            <table id="T2" @click="tabla2" >
+                <tr>
+                    <td v-for="curso in total2">{{dato2}}</td>
+                </tr>
+            </table>
+            <input type="range" name="" v-model="divisiones" min="1" max="32" class="range">
+            <p>Divisiones: {{divisiones}}</p>
+            <input type="text" v-model="cantidad">
+        </template>
+    </div>
+    <script type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript">
+    let a = false;
+    let b = false;
+    let t1, t2, datot1 = '', datot2 = '', d1,d2;
+    
+
+    let app = new Vue({
+        el: '#app',
+        data: {
+            divisiones: 1,
+            cantidad: '',
+        },
+        computed: {
+            total1: function() {
+            x = Number(this.divisiones)
+            
+                if (a == true) {
+                    t1 = x
+                    return x
+                }
+                else{
+                    return t1
+                }
+            },
+            total2: function() {
+                y = Number(this.divisiones)
+                if (b == true) {
+                    t2 = y
+                    return y
+                }
+                else{
+                    return t2;
+                }
+            },
+            dato1:function(){
+            datot1 = this.cantidad;
+                if(a == true){
+                    d1 = datot1;
+                    return d1;
+                }
+                else{
+                    return d1;
+                }
+            },
+            dato2:function(){
+            datot2 = this.cantidad;
+                if(b == true){
+                    d2 = datot2;
+                    return d2;
+                }
+                else{
+                    return d2;
+                }
+            }
+        },
+        methods: {
+            tabla1: function() {
+                a = true;
+                b = false;
+                console.log("click tabla 1");
+                x = document.getElementById("T1");
+            },
+            tabla2: function() {
+                a = false;
+                b = true;
+                console.log("click tabla 2");
+            },
+            numero: function(){
+            }
+        }
+    });
+    </script>
+</body>
+        
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+			<h1> {{titulo | uppercase}} </h1>
+			<h2> {{subtitulo | lowercase}} </h2>	
+	</div>
+
+	<script type="text/javascript" src="vue.js"></script>
+	<script type="text/javascript">
+		let app = new Vue({
+			el: '#app',
+			data: {
+				titulo: 'Este es mi titulo.',
+				subtitulo: 'Este es el subtitulo.',
+			},
+			filters: {
+				uppercase: function(str){
+					return str.toUpperCase()
+				},
+				lowercase: function(str){
+					return str.toLowerCase()
+				}
+			}
+		})
+	</script>
+</body>
+</html>

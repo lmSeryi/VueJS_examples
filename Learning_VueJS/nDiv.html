@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+            <h2>¿Cuáles son tus cursos favoritos?</h2>
+            <template>
+                <table>
+                	<tr>
+                		<td v-for="curso in cursos">Hola</td>
+                	</tr>
+                </table>
+                <button  @click="cursos++" v-if="cursos<limite ">Agregar</button>
+           		<button  @click="cursos--" v-if="cursos">Eliminar</button>
+           		
+            </template>
+            
+    </div>
+    <script type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript">
+    let app = new Vue({
+        el: '#app',
+        data: {
+        	limite: 32,
+            nombre: '',
+            cursos: 1            
+        }
+    });
+    </script>
+</body>
+
+</html>
